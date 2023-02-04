@@ -1,1 +1,1 @@
-worker: node --max_old_space_size=8192 index.js
+worker: pm2 start "npm start run dev" && pm2 save && pm2 logs
