@@ -14,6 +14,9 @@ Skrip ini untuk semua orang, bukan untuk Dijual.
 
 This is Script of WhatsApp multi device, working with [`@adiwajshing/baileys`](https://github.com/adiwajshing/baileys)
 
+## Group Discussion
+- Join grup jika kamu nanya, kamu bertanya-tanya.
+[`Group Link`](https://chat.whatsapp.com/D6BZVRSymWaFU28t2lxaO0)
 ## My Project
 * Script Plugins [`Go here`](https://github.com/BOTCAHX/RTXZY-MD) (`Multiple Sessions Bot`)
 * Original Script [`DikaArdnt/Hisoka-Morrow`](https://github.com/DikaArdnt/Hisoka-Morrow) (Sc Original)
