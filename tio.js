@@ -38,7 +38,7 @@ const ini_kangbaned = `0@s.whatsapp.net`
 const ownernya = ownernomer + '@s.whatsapp.net'
 global.prem = require("./lib/premium")
 gambar = fs.readFileSync('./media/image/tio.jpg')
-const lolkey = 'mars'
+const lolkey = '84e68eb61dd75f4c95374cad'
 //TIME
 const time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')  
  if(time2 < "23:59:00"){
