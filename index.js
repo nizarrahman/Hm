@@ -1,4 +1,5 @@
 require("http").createServer((_, res) => res.end("ONLINE..")).listen(8080)
+
 require('./setting')
 const { default: tioConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
 const { state, saveState } = useSingleFileAuthState(`./${sessionName}.json`)
@@ -65,7 +66,7 @@ async function startTio() {
     const tio = tioConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['BOT WA','Safari','1.0.0'],
+        browser: ['BOTCAHX','Safari','1.0.0'],
         auth: state
     })
 
