@@ -19,6 +19,11 @@ This is Script of WhatsApp multi device, working with [`@adiwajshing/baileys`](h
 * Original Script [`DikaArdnt/Hisoka-Morrow`](https://github.com/DikaArdnt/Hisoka-Morrow) (Sc Original)
 * WhatsApp Bot Using Library whatsapp-web.js [`hisoka-waweb.js`](https://github.com/Hisoka-Morrou/hisoka-waweb.js/)
 
+## Setting Autotyping & Recording
+- Hapus tanda ```/** ``` dan ``` **/```  untuk mengaktifkan fitur tersebut
+- Baris [`Line`](https://github.com/BOTCAHX/Hoream-MD/blob/b963a8c8c656a93acad7c0df9dad6c1a5ecef744/tio.js#L191)
+
+
 ## UNTUK PENGGUNA WINDOWS/RDP
 
 * Unduh & Instal Git [`Klik Disini`](https://git-scm.com/downloads)
