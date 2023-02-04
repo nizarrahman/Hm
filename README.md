@@ -19,6 +19,43 @@ This is Script of WhatsApp multi device, working with [`@adiwajshing/baileys`](h
 * Original Script [`DikaArdnt/Hisoka-Morrow`](https://github.com/DikaArdnt/Hisoka-Morrow) (Sc Original)
 * WhatsApp Bot Using Library whatsapp-web.js [`hisoka-waweb.js`](https://github.com/Hisoka-Morrou/hisoka-waweb.js/)
 
+## UNTUK PENGGUNA WINDOWS/RDP
+
+* Unduh & Instal Git [`Klik Disini`](https://git-scm.com/downloads)
+* Unduh & Instal NodeJS [`Klik Disini`](https://nodejs.org/en/download)
+* Unduh & Instal FFmpeg [`Klik Disini`](https://ffmpeg.org/download.html) (**Jangan Lupa Tambahkan FFmpeg ke variabel lingkungan PATH**)
+
+
+```bash
+git clone https://github.com/BOTCAHX/Hoream-MD 
+cd Hoream-MD 
+npm install
+```
+
+## FOR TERMUX/UBUNTU/SSH USER
+
+```bash
+apt update && apt upgrade
+apt install git -y
+apt install nodejs -y
+apt install ffmpeg -y
+git clone https://github.com/BOTCAHX/Hoream-MD 
+cd Hoream-MD 
+npm install
+```
+
+## RECOMMENDED INSTALL ON TERMUX
+
+```bash
+pkg install yarn
+yarn
+```
+
+## Installing
+```bash
+$ npm start
+```
+
 ## Thanks To
 * [`@adiwajshing/baileys`](https://github.com/adiwajshing/baileys)
 * [`Nurutomo`](https://github.com/Nurutomo)
