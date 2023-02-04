@@ -19,3 +19,12 @@ This is Script of WhatsApp multi device, working with [`@adiwajshing/baileys`](h
 * Original Script [`DikaArdnt/Hisoka-Morrow`](https://github.com/DikaArdnt/Hisoka-Morrow) (Sc Original)
 * WhatsApp Bot Using Library whatsapp-web.js [`hisoka-waweb.js`](https://github.com/Hisoka-Morrou/hisoka-waweb.js/)
 
+## Thanks To
+* [`@adiwajshing/baileys`](https://github.com/adiwajshing/baileys)
+* [`Nurutomo`](https://github.com/Nurutomo)
+* [`BOTCAHX`](https://github.com/MhankBarBar)
+* [`DikaArdnt`](https://github.com/DikaArdnt)
+* [`Fatih Arridho`](https://github.com/BOTCAHX)
+* [`Naze Dev`](https://github.com/nazedev)
+
+```Thanks to all who have participated in the development of this script```
