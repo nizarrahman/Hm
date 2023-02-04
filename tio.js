@@ -186,14 +186,21 @@ module.exports = tio = async (tio, m, chatUpdate, store) => {
         if (m.message) {
             tio.readMessages([m.key])
         }
-        if (m.message) {
+
+
+        // hapus tanda tanda  (/**) dan (**/) 
+        //untuk mengaktifkan autotype dan autorecoding
+
+        /**if (m.message) {
 tio.sendPresenceUpdate('composing', m.chat)
 tio.readMessages([m.key])
 }
  if (m.message) {
 tio.sendPresenceUpdate('recording', m.chat)
 tio.readMessages([m.key])
-}
+}**/
+
+
         if (m.text.includes('🗿')) {
     tio.sendMessage(m.chat, {
           react: {
