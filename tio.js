@@ -1013,7 +1013,7 @@ break
             }
             break
             case 'sc': {
-                m.reply('private')
+                m.reply('https://github.com/BOTCAHX/Hoream-MD')
             }
             break		 
             case 'ceklimit': case 'checklimit': case 'limit':{
