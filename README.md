@@ -23,9 +23,32 @@ This is Script of WhatsApp multi device, working with [`@adiwajshing/baileys`](h
 * WhatsApp Bot Using Library whatsapp-web.js [`hisoka-waweb.js`](https://github.com/Hisoka-Morrou/hisoka-waweb.js/)
 
 ## Setting Autotyping & Recording
-- Hapus tanda ```/** ``` dan ``` **/```  untuk mengaktifkan fitur tersebut
-- Baris [`Line`](https://github.com/BOTCAHX/Hoream-MD/blob/b963a8c8c656a93acad7c0df9dad6c1a5ecef744/tio.js#L191)
+- Tambahkan tanda ```/** ``` dan ``` **/```  untuk mengaktifkan / menonaktifkan fitur tersebut
+- Edit Di Baris [`Line`](https://github.com/BOTCAHX/Hoream-MD/blob/b963a8c8c656a93acad7c0df9dad6c1a5ecef744/tio.js#L191)
+- Contoh Mematikan:
+```
 
+        /**if (m.message) {
+tio.sendPresenceUpdate('composing', m.chat)
+tio.readMessages([m.key])
+}
+ if (m.message) {
+tio.sendPresenceUpdate('recording', m.chat)
+tio.readMessages([m.key])
+}**/
+
+```
+- Contoh Mengaktifkan
+```
+if (m.message) {
+tio.sendPresenceUpdate('composing', m.chat)
+tio.readMessages([m.key])
+}
+ if (m.message) {
+tio.sendPresenceUpdate('recording', m.chat)
+tio.readMessages([m.key])
+}
+```
 
 ## UNTUK PENGGUNA WINDOWS/RDP
 
