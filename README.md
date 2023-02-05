@@ -23,7 +23,7 @@ This is Script of WhatsApp multi device, working with [`@adiwajshing/baileys`](h
 * WhatsApp Bot Using Library whatsapp-web.js [`hisoka-waweb.js`](https://github.com/Hisoka-Morrou/hisoka-waweb.js/)
 
 ## Setting Autotyping & Recording
-- Tambahkan tanda ```/** ``` dan ``` **/```  untuk mengaktifkan / menonaktifkan fitur tersebut
+- Tambahkan tanda ```[/**] ``` dan ``` [**/]```  untuk mengaktifkan atau menonaktifkan fitur tersebut
 - Edit Di Baris [`Line`](https://github.com/BOTCAHX/Hoream-MD/blob/b963a8c8c656a93acad7c0df9dad6c1a5ecef744/tio.js#L191)
 - Contoh Mematikan:
 ```
