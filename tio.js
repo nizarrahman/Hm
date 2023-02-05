@@ -61,16 +61,17 @@ var ucapanWaktu = 'Selamat Pagi 🌉'
  } 
  
 // read database
-let tebaklagu = db.data.game.tebaklagu = []
-let _family100 = db.data.game.family100 = []
-let kuismath = db.data.game.math = []
-let tebakgambar = db.data.game.tebakgambar = []
-let tebakkata = db.data.game.tebakkata = []
-let caklontong = db.data.game.lontong = []
-let caklontong_desk = db.data.game.lontong_desk = []
-let tebakkalimat = db.data.game.kalimat = []
-let tebaklirik = db.data.game.lirik = []
-let tebaktebakan = db.data.game.tebakan = []
+let game = db.data.game
+let tebaklagu = game.tebaklagu = []
+let _family100 = game.family100 = []
+let kuismath = game.math = []
+let tebakgambar = game.tebakgambar = []
+let tebakkata = game.tebakkata = []
+let caklontong = game.lontong = []
+let caklontong_desk = game.lontong_desk = []
+let tebakkalimat = game.kalimat = []
+let tebaklirik = game.lirik = []
+let tebaktebakan = game.tebakan = []
 let vote = db.data.others.vote = []
 
 module.exports = tio = async (tio, m, chatUpdate, store) => {
