@@ -11,6 +11,7 @@ const chalk = require('chalk')
 const FileType = require('file-type')
 const path = require('path')
 const _ = require('lodash')
+const lolcatjs = require('lolcatjs')
 const axios = require('axios')
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
@@ -243,20 +244,56 @@ async function startTio() {
     tio.serializeM = (m) => smsg(tio, m, store)
 
     tio.ev.on('connection.update', async (update) => {
-        const { connection, lastDisconnect } = update	    
-        if (connection === 'close') {
-        let reason = new Boom(lastDisconnect?.error)?.output.statusCode
-            if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); tio.logout(); }
-            else if (reason === DisconnectReason.connectionClosed) { console.log("Connection closed, reconnecting...."); startTio(); }
-            else if (reason === DisconnectReason.connectionLost) { console.log("Connection Lost from Server, reconnecting..."); startTio(); }
-            else if (reason === DisconnectReason.connectionReplaced) { console.log("Connection Replaced, Another New Session Opened, Please Close Current Session First"); tio.logout(); }
-            else if (reason === DisconnectReason.loggedOut) { console.log(`Device Logged Out, Please Scan Again And Run.`); tio.logout(); }
-            else if (reason === DisconnectReason.restartRequired) { console.log("Restart Required, Restarting..."); startTio(); }
-            else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOut, Reconnecting..."); startTio(); }
-            else tio.end(`Unknown DisconnectReason: ${reason}|${connection}`)
-        }
-        console.log('Connected...', update)
-    })
+const { connection, lastDisconnect } = update
+try {
+if (connection === 'close') {
+	let reason = new Boom(lastDisconnect?.error)?.output.statusCode
+	if (reason === DisconnectReason.badSession) {
+	console.log(`Bad Session File, Please Delete Session and Scan Again`);
+	startTio()
+	} else if (reason === DisconnectReason.connectionClosed) {
+	console.log("Connection closed, reconnecting....");
+	startTio();
+	} else if (reason === DisconnectReason.connectionLost) {
+	console.log("Connection Lost from Server, reconnecting...");
+	startTio();
+	} else if (reason === DisconnectReason.connectionReplaced) {
+	console.log("Connection Replaced, Another New Session Opened, Please Close Current Session First");
+	startTio()
+    } else if (reason === DisconnectReason.loggedOut) {
+	console.log(`Device Logged Out, Please Scan Again And Run.`);
+	startTio();
+	} else if (reason === DisconnectReason.restartRequired) {
+	console.log("Restart Required, Restarting...");
+	startTio();
+	} else if (reason === DisconnectReason.timedOut) {
+	console.log("Waktu Koneksi Habis, Menyambungkan Ulang...");
+	startTio();
+	} else tio.end(`Unknown DisconnectReason: ${reason}|${connection}`)
+}
+if (update.connection == "connecting" || update.receivedPendingNotifications == "false") {
+lolcatjs.fromString(`Connecting...`)
+}
+if (update.connection == "open" || update.receivedPendingNotifications == "true") {
+	lolcatjs.fromString(`Mengkoneksikan Ke => WhatsApp Web`)
+	lolcatjs.fromString(`Berhasil Tersambung Ke ` + JSON.stringify(tio.user, null, 2))
+	global.creator = ['6285692006004']
+	let imgown = await getBuffer('https://telegra.ph/file/4ea5b7309bb948e62bc3a.jpg')
+	let imgcrea = await getBuffer('https://telegra.ph/file/b8aa5d61ad7bc8eb90e43.jpg')
+	let butcrea = [{ buttonId: `.owner`, buttonText: { displayText: 'Owner' }, type: 1 }, { buttonId: `.ping`, buttonText: { displayText: 'Status Bot' }, type: 1 }]
+    let butown = [{ buttonId: `.owner`, buttonText: { displayText: 'Owner' }, type: 1 }, { buttonId: `.ping`, buttonText: { displayText: 'Status Bot' }, type: 1 }]
+	let txtown = `Halo Owner, Bot Telah Berhasil Tersambung Pada Nomer Ini \n\nJika Menemukan Eror, Bug, Atau Ingin Request Fitur Silahkan Hubungi Nomer Tersebut!`
+	let txtcrea = `Script ini telah dipakai oleh ${global.owner}@s.whatsapp.net`
+	lolcatjs.fromString('Sukses Mengirim Pesan Ke Owner Dan Creator ☑️')
+	tio.sendMessage(global.owner+'@s.whatsapp.net', { image: imgown, caption: txtown, buttons: butcrea, footer: global.ownerName })
+    tio.sendMessage(global.creator+,'@s.whatsapp.net', { image: imgcrea, caption: txtcrea, buttons: butown, footer: global.ownerName })
+    tio.sendContact(global.owner+'@s.whatsapp.net', global.creator)
+	}
+} catch (err) {
+console.log('error di connection.update'+err)
+startTio();
+}
+})
 
     tio.ev.on('creds.update', saveState)
       tio.reSize = async (image, width, height) => {
