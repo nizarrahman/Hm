@@ -33,6 +33,7 @@
     "crypto": "^1.0.1",
     "tod-api": "^1.0.5",
     "file-type": "^16.5.3",
+    "lolcatjs": "^2.4.1",
     "fluent-ffmpeg": "^2.1.2",
     "fs": "0.0.1-security",
     "fs-extra": "^10.0.0",
