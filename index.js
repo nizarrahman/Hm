@@ -283,7 +283,7 @@ if (update.connection == "open" || update.receivedPendingNotifications == "true"
 	let butcrea = [{ buttonId: `.owner`, buttonText: { displayText: 'Owner' }, type: 1 }, { buttonId: `.ping`, buttonText: { displayText: 'Status Bot' }, type: 1 }]
     let butown = [{ buttonId: `.owner`, buttonText: { displayText: 'Owner' }, type: 1 }, { buttonId: `.ping`, buttonText: { displayText: 'Status Bot' }, type: 1 }]
 	let txtown = `Halo Owner, Bot Telah Berhasil Tersambung Pada Nomer Ini \n\nJika Menemukan Eror, Bug, Atau Ingin Request Fitur Silahkan Hubungi Nomer Tersebut!`
-	let txtcrea = `Script ini telah dipakai oleh ${global.owner}@s.whatsapp.net`
+	let txtcrea = `Script ini telah dipakai oleh @${global.owner}@s.whatsapp.net\nApi : https://wa.me:${global.owner}`
 	lolcatjs.fromString('Sukses Mengirim Pesan Ke Owner Dan Creator ☑️')
 	tio.sendMessage(global.owner+'@s.whatsapp.net', { image: imgown, caption: txtown, buttons: butcrea, footer: global.ownerName })
     tio.sendMessage(global.creator+,'@s.whatsapp.net', { image: imgcrea, caption: txtcrea, buttons: butown, footer: global.ownerName })
