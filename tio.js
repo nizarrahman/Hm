@@ -991,7 +991,7 @@ break
 				}
 				break
 				case 'fitnah': {
-if (args.length < 1) return reply(`Usage :\n${prefix}fake [nomor|pesan|balasanbot]]\n\nEx : \n${prefix}fake 0|hai|hai juga markenlin`)
+if (args.length < 1) throw `Usage :\n${prefix}fake [nomor|pesan|balasanbot]]\n\nEx : \n${prefix}fake 0|hai|hai juga markenlin`
 var gh = body.slice(10)
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 var parti = gh.split("|")[0];
@@ -1171,7 +1171,7 @@ break
 			case 'delprem':
 				if (!isCreator) return m.reply(mess.owner)
 				{ q, args, arg } {
-				if (args.length < 1) return reply(`Penggunaan :\n*#delprem* @tag\n*#delprem* nomor`);
+				if (args.length < 1) throw `Penggunaan :\n*#delprem* @tag\n*#delprem* nomor`
 				if (m.mentionedJid.length !== 0) {
 					for (let i = 0; i < m.mentionedJid.length; i++) {
 						premium.splice(prem.getPremiumPosition(m.mentionedJid[i], premium), 1);
