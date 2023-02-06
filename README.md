@@ -94,5 +94,7 @@ $ npm start
 * [`DikaArdnt`](https://github.com/DikaArdnt)
 * [`Fatih Arridho`](https://github.com/BOTCAHX)
 * [`Naze Dev`](https://github.com/nazedev)
+* [`AzRyCb`](https://github.com/AzRyCb)
+
 
 ```Thanks to all who have participated in the development of this script```
