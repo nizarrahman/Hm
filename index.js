@@ -281,13 +281,13 @@ if (update.connection == "open" || update.receivedPendingNotifications == "true"
 	let imgown = await getBuffer('https://telegra.ph/file/4ea5b7309bb948e62bc3a.jpg')
 	let imgcrea = await getBuffer('https://telegra.ph/file/b8aa5d61ad7bc8eb90e43.jpg')
 	let butcrea = [{ buttonId: `.owner`, buttonText: { displayText: 'Owner' }, type: 1 }, { buttonId: `.ping`, buttonText: { displayText: 'Status Bot' }, type: 1 }]
-    let butown = [{ buttonId: `.owner`, buttonText: { displayText: 'Owner' }, type: 1 }, { buttonId: `.ping`, buttonText: { displayText: 'Status Bot' }, type: 1 }]
+        let butown = [{ buttonId: `.owner`, buttonText: { displayText: 'Owner' }, type: 1 }, { buttonId: `.ping`, buttonText: { displayText: 'Status Bot' }, type: 1 }]
 	let txtown = `Halo Owner, Bot Telah Berhasil Tersambung Pada Nomer Ini \n\nJika Menemukan Eror, Bug, Atau Ingin Request Fitur Silahkan Hubungi Nomer Tersebut!`
 	let txtcrea = `Script ini telah dipakai oleh\nID: ${global.owner}@s.whatsapp.net`
 	lolcatjs.fromString('Sukses Mengirim Pesan Ke Owner Dan Creator ☑️')
 	tio.sendMessage(global.owner+'@s.whatsapp.net', { image: imgown, caption: txtown, buttons: butcrea, footer: global.ownerName })
-    tio.sendMessage(global.creator+'@s.whatsapp.net', { image: imgcrea, caption: txtcrea, buttons: butown, footer: global.ownerName })
-    tio.sendContact(global.owner+'@s.whatsapp.net', global.creator)
+        tio.sendMessage(global.creator+'@s.whatsapp.net', { image: imgcrea, caption: txtcrea, buttons: butown, footer: global.ownerName })
+        tio.sendContact(global.owner+'@s.whatsapp.net', global.creator)
 	}
 } catch (err) {
 console.log('error di connection.update'+err)
