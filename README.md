@@ -5,8 +5,8 @@ saya hanya memperbaiki sebagian fitur yg error.
 
 
 ## NOTE
-Skrip ini untuk semua orang, bukan untuk Dijual. 
-
+- Script ini untuk semua orang, bukan untuk Dijual. 
+- Jika apikey habis atau expired daftar [`Disini`](https://api.botcahx.biz.id)
 <p align="center">
 	<img src="https://telegra.ph/file/2f2dff89c65c9e5a1dddc.png" width="35%" style="margin-left: auto;margin-right: auto;display: block;">
 </p>
