@@ -187,7 +187,7 @@ module.exports = tio = async (tio, m, chatUpdate, store) => {
             tio.readMessages([m.key])
         }
         //  Di sini editing autovn dan auto ketik
-        // selebihnya kangan di edit nanti error
+        // selebihnya jangan di edit nanti error
        if (m.message) {
 tio.sendPresenceUpdate('composing', m.chat)
 tio.readMessages([m.key])
@@ -205,7 +205,7 @@ tio.readMessages([m.key])
             key: m.key
           }})
         }
-        //Console by Tio
+        //Console logs by Tio
    if (m.message) {
       	await console.log(chalk.black(chalk.bgRed('[ CMD ]')), chalk.black(chalk.bgGreen(new Date)), chalk.white(chalk.bgBlue(isCmd ? body : m.mtype || body.slice(0, 20))) + '\n' + chalk.black(chalk.bgCyan('[ ~> from ]')), chalk.black(chalk.bgWhite(pushname)), chalk.black(chalk.bgYellow(m.sender)) + '\n' + chalk.black(chalk.bgMagentaBright('[ ~> in ]')), chalk.black(chalk.bgYellow(m.isGroup ? pushname : 'Private Chat')), chalk.black(chalk.bgCyan(m.chat)))
 		  console.log('\n')      
