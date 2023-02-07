@@ -38,7 +38,6 @@ const ini_kangbaned = `0@s.whatsapp.net`
 const ownernya = ownernomer + '@s.whatsapp.net'
 global.prem = require("./lib/premium")
 gambar = fs.readFileSync('./media/image/tio.jpg')
-const lolkey = '84e68eb61dd75f4c95374cad'
 //TIME
 const time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')  
  if(time2 < "23:59:00"){
@@ -2221,12 +2220,12 @@ break
 	    break
 	       case 'attp': {
            if (!text) throw `Example : ${prefix + command} text`
-           await tio.sendMedia(m.chat, `https://api.lolhuman.xyz/api/attp?apikey=${lolkey}&text=${text}`, 'attp.webp', '', m, { asSticker: true })
+           await tio.sendMedia(m.chat, `https://api.botcahx.biz.id/api/maker/attp?text=${text}&apikey=Admin`, 'attp.webp', '', m, { asSticker: true })
          }
-         break
-         case 'ttp': {
+           break
+               case 'ttp': {
            if (!text) throw `Example : ${prefix + command} text`
-           await tio.sendMedia(m.chat, `https://api.lolhuman.xyz/api/ttp?apikey=${lolkey}&text=${text}`, 'ttp.webp', '', m, { asSticker: true })
+           await tio.sendMedia(m.chat, `https://api.botcahx.biz.id/api/maker/ttp?text=${text}&apikey=Admin`, 'ttp.webp', '', m, { asSticker: true })
          }
          break
          case 'tts': {
